@@ -1,0 +1,118 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+:root {
+	--mainColor: #cecaca;
+	--textColor: #fff;
+	--btnColor: #98f30e;
+	--mainHeader: #a9a4a4;
+	--mainFont: 'Lato', sans-serif;
+	--secondFont: 'Gabarito', sans-serif;
+	font-size: 68.5%;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--mainColor);
+	color: var(--textColor);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header {
+	background-color: var(--mainHeader);
+	min-width: 100%;
+	padding: 2rem;
+	text-align: center;
+}
+
+.header h1 {
+	font-family: var(--secondFont);
+	font-size: 2.5rem;
+}
+
+.main {
+	min-width: 100%;
+	min-height: 95vh;
+}
+
+.img-box {
+	display: flex;
+	min-width: 100%;
+	min-height: 95vh;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.img-box .btn {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 1.5rem 3.5rem;
+	border: none;
+	border-radius: 1rem;
+	color: var(--textColor);
+	background-color: var(--btnColor);
+	transition: color 0.5s ease-in-out, background 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.img-box .btn:hover {
+	color: var(--btnColor);
+	background-color: var(--textColor);
+	transform: scale(1.1);
+}
+
+.img-box .img-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 28%;
+	margin: 1rem;
+	border-radius: 1rem;
+	box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.img-box .img-container span {
+	font-size: 1.8rem;
+	font-family: var(--mainFont);
+	text-align: center;
+	padding: 1rem;
+}
+
+.img-box .img-container .picture {
+	max-width: 100%;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+
+@media (max-width: 900px) {
+	.header h1 {
+		font-size: 1rem;
+	}
+
+	.img-box .img-container span {
+		font-size: .8rem;
+	}
+}
+@media (max-width: 630px) {
+	.header h1 {
+		font-size: 1rem;
+	}
+
+	.img-box .img-container span {
+		font-size: 1rem;
+	}
+
+	.img-box .img-container {
+		min-width: 100%;
+	}
+}
